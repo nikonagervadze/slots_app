@@ -1,0 +1,14 @@
+<div class="slots-list">
+  <div
+    class="games-list grid-auto-rows-169 mb-3 grid grid-cols-auto-fill gap-3"
+  >
+    @for (slot of providerGames$ | async; track $index) {
+      <app-slot-item
+        [slotdata]="slot"
+        class="rounded shadow-custom"
+        [ngClass]="{ 'col-span-2 row-span-2': $index === 0 }"
+      >
+      </app-slot-item>
+    }
+  </div>
+</div>
