@@ -1,0 +1,31 @@
+<div
+  class="relative flex h-full w-full cursor-pointer flex-col justify-between rounded-b-md bg-header"
+>
+  <div
+    class="slot_cover relative flex h-full min-h-135 w-full justify-center text-center duration-200"
+  >
+    @if (slotdata.tags.includes("new")) {
+      <span
+        class="absolute left-2.5 top-2.5 z-10 rounded-sm bg-secondaryGreen px-1.5 py-0.5 text-10 text-white opacity-100"
+        >NEW</span
+      >
+    }
+    <picture class="absolute h-full w-full"
+      ><source type="image/webp" srcset="{{slotdata.image}}" />
+      <img class="item__img h-full w-full" src="{{ slotdata.image }}"
+    /></picture>
+    ><button
+      class="btn_play absolute top-57 z-10 w-calc max-w-[190px] -translate-y-1/2 transform rounded border-0 bg-primaryGreen px-2.5 py-3 pb-2 text-base leading-none text-white opacity-0 shadow-md duration-200"
+    >
+      Play
+    </button>
+  </div>
+
+  <div
+    class="m-3 flex h-titleHeight items-center text-left text-sm text-primaryWhite"
+  >
+    <span class="overflow-hidden text-ellipsis whitespace-nowrap">{{
+      slotdata.name
+    }}</span>
+  </div>
+</div>
